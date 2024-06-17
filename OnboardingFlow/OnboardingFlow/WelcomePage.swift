@@ -23,16 +23,12 @@ struct WelcomePage: View {
                 .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
                 .padding(.top)
-                .border(.black, width: 1.5)
             Text("Developed in the Redwoods")
                 .font(.title2)
                 .fontWeight(.light)
                 .multilineTextAlignment(.center)
-                .border(.black, width: 1.5)
         }
-        .border(.red, width: 1.5)
         .padding()
-        .border(.orange, width: 1.5)
     }
 }
 

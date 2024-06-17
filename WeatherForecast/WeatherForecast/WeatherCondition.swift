@@ -18,4 +18,7 @@ struct WeatherCondition {
     
     static let sunny = WeatherCondition(iconName: "sun.max.fill", color: .yellow)
     static let rainy = WeatherCondition(iconName: "cloud.rain.fill", color: .blue)
+    static let drizzle = WeatherCondition(iconName: "cloud.drizzle.fill", color: .teal)
+    static let cloudy = WeatherCondition(iconName: "cloud.fill", color: .gray)
+    static let partlyCloudy = WeatherCondition(iconName: "cloud.sun.fill", color: .orange)
 }

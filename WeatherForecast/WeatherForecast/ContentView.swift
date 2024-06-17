@@ -9,9 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        HStack(spacing: 8.0) {
-            DayForecast(day: "MON", high: 25, low: 17, weatherCondition: .sunny)
-            DayForecast(day: "TUE", high: 18, low: 12, weatherCondition: .rainy)
+        VStack (spacing: 8.0) {
+            HStack(spacing: 8.0) {
+                DayForecast(day: "MON", high: 11, low: 7, weatherCondition: .rainy)
+                DayForecast(day: "TUE", high: 12, low: 6, weatherCondition: .drizzle)
+                DayForecast(day: "WED", high: 13, low: 1, weatherCondition: .cloudy)
+            }
+            HStack(spacing: 8.0) {
+                DayForecast(day: "THU", high: 17, low: 2, weatherCondition: .partlyCloudy)
+                DayForecast(day: "FRI", high: 20, low: 7, weatherCondition: .sunny)
+            }
         }
     }
 }

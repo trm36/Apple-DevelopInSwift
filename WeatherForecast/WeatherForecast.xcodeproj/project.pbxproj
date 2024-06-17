@@ -12,6 +12,7 @@
 		012A31B72C20197D00C1D63A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012A31B62C20197D00C1D63A /* Assets.xcassets */; };
 		012A31BA2C20197D00C1D63A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 012A31B92C20197D00C1D63A /* Preview Assets.xcassets */; };
 		012A31C12C20293500C1D63A /* WeatherCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A31C02C20293500C1D63A /* WeatherCondition.swift */; };
+		012A31C32C20D64100C1D63A /* DayWeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 012A31C22C20D64100C1D63A /* DayWeatherData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		012A31B62C20197D00C1D63A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		012A31B92C20197D00C1D63A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		012A31C02C20293500C1D63A /* WeatherCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCondition.swift; sourceTree = "<group>"; };
+		012A31C22C20D64100C1D63A /* DayWeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayWeatherData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				012A31B22C20197C00C1D63A /* WeatherForecastApp.swift */,
 				012A31B42C20197C00C1D63A /* ContentView.swift */,
+				012A31C22C20D64100C1D63A /* DayWeatherData.swift */,
 				012A31C02C20293500C1D63A /* WeatherCondition.swift */,
 				012A31B62C20197D00C1D63A /* Assets.xcassets */,
 				012A31B82C20197D00C1D63A /* Preview Content */,
@@ -143,6 +146,7 @@
 				012A31B52C20197C00C1D63A /* ContentView.swift in Sources */,
 				012A31C12C20293500C1D63A /* WeatherCondition.swift in Sources */,
 				012A31B32C20197C00C1D63A /* WeatherForecastApp.swift in Sources */,
+				012A31C32C20D64100C1D63A /* DayWeatherData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

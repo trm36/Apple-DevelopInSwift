@@ -13,10 +13,10 @@ struct WelcomePage: View {
             ZStack {
                 RoundedRectangle(cornerRadius: 30.0)
                     .frame(width: 150.0, height: 150.0)
-                    .foregroundStyle(.purple)
+                    .foregroundStyle(.tint)
                 Image(systemName: "figure.soccer")
                     .font(.system(size: 70.0))
-                    .foregroundStyle(.black)
+                    .foregroundStyle(.white)
             }
             Text("Welcome to MyApp")
                 .font(.largeTitle)

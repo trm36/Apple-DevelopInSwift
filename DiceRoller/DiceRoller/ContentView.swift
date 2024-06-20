@@ -30,6 +30,7 @@ struct ContentView: View {
                 Button("Remove Dice", systemImage: "minus.square.fill") {
                     numberOfDice -= 1
                 }
+                .symbolRenderingMode(.multicolor)
                 .disabled(numberOfDice == 1)
                 
                 Spacer()
@@ -37,6 +38,7 @@ struct ContentView: View {
                 Button("Add Dice", systemImage: "plus.square.fill") {
                     numberOfDice += 1
                 }
+                .symbolRenderingMode(.multicolor)
                 .disabled(numberOfDice == 5)
                 
                 Spacer()

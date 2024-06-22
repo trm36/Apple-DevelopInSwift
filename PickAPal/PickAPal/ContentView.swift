@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var nameToAdd: String = ""
     @State private var pickedName: String = ""
     @State private var shouldRemovePickedName: Bool = false
+    @State private var savedNames: [String] = []
     
     var body: some View {
         VStack(spacing: 16.0) {
@@ -39,10 +40,35 @@ struct ContentView: View {
             TextField("Add Name", text: $nameToAdd)
                 .autocorrectionDisabled()
                 .onSubmit {
-                    guard !nameToAdd.isEmpty else { return }
-                    names.append(nameToAdd)
+                    var nameEntered = nameToAdd
+                    guard !nameEntered.isEmpty && !names.contains(nameEntered) else { return }
+                    let trimmedNameEntered = nameEntered.trimmingCharacters(in: .whitespacesAndNewlines)
+                    names.append(trimmedNameEntered)
                     nameToAdd = ""
                 }
+            
+            HStack {
+                Spacer()
+                
+                Button {
+                    savedNames = names
+                } label: {
+                    Text("Save List")
+                }
+                .disabled(names.isEmpty)
+
+                Spacer()
+                
+                Button {
+                    names = savedNames
+                    pickedName = ""
+                } label: {
+                    Text("Load List")
+                }
+                .disabled(savedNames.isEmpty)
+                
+                Spacer()
+            }
             
             Divider()
             

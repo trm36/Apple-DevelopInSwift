@@ -48,14 +48,14 @@ struct MovieDetail: View {
 
 #Preview {
     NavigationStack {
-        MovieDetail(movie: SampleData.shared.testMovie)
+        MovieDetail(movie: SampleData.shared.movie)
     }
     .modelContainer(SampleData.shared.modelContainer)
 }
 
 #Preview("New Movie") {
     NavigationStack {
-        MovieDetail(movie: SampleData.shared.testMovie, isNew: true)
+        MovieDetail(movie: SampleData.shared.movie, isNew: true)
             .navigationBarTitleDisplayMode(.inline)
     }
     .modelContainer(SampleData.shared.modelContainer)

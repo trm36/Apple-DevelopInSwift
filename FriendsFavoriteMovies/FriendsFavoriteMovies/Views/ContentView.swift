@@ -36,7 +36,7 @@ struct ContentView: View {
             }
             .navigationTitle("Movies")
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .topBarTrailing) {
                     EditButton()
                 }
                 ToolbarItem {

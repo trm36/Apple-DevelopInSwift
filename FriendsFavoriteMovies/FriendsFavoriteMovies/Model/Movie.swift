@@ -10,8 +10,15 @@ import SwiftData
 
 @Model
 final class Movie {
+    
+    /// The movie's title.
     var title: String
+    
+    /// The movie's release date.
     var releaseDate: Date
+    
+    /// An array of friend's that indicated this is their favorite movie.
+    var favoritedBy: [Friend] = []
     
     init(title: String, releaseDate: Date) {
         self.title = title

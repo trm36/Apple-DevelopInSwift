@@ -24,8 +24,7 @@ struct FriendList: View {
                     List {
                         ForEach(friends) { friend in
                             NavigationLink {
-                                Text(friend.name)
-                                    .navigationTitle("Friend")
+                                FriendDetail(friend: friend)
                             } label: {
                                 Text(friend.name)
                             }
@@ -47,7 +46,7 @@ struct FriendList: View {
             }
             .sheet(item: $newFriend) { friend in
                 NavigationStack {
-                    Text("New Friend")
+                    FriendDetail(friend: friend, isNew: true)
                 }
                 .interactiveDismissDisabled()
             }

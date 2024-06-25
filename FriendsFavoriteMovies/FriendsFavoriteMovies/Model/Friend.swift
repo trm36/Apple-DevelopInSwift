@@ -10,7 +10,11 @@ import SwiftData
 
 @Model
 class Friend {
+    /// A friend's full name.
     var name: String
+    
+    /// A friend's favorite movie.
+    var favoriteMovie: Movie?
     
     init(name: String) {
         self.name = name

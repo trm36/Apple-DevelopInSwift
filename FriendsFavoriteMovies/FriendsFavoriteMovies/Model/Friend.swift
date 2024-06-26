@@ -22,10 +22,10 @@ class Friend {
     
     /// An array of `Friend` that contains sample data for testing.
     static let sampleData = [
-        Friend(name: "Becca"),
-        Friend(name: "Caleb"),
-        Friend(name: "Aaron"),
-        Friend(name: "Alan"),
-        Friend(name: "Johnny"),
+        Friend(name: "Becca Smith"),
+        Friend(name: "Caleb Smith"),
+        Friend(name: "Aaron Jones"),
+        Friend(name: "Alan Jones"),
+        Friend(name: "Johnny Johnson"),
     ]
 }

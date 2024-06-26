@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		018B57562C2B6CD200387C9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018B57552C2B6CD200387C9B /* ContentView.swift */; };
+		018B57582C2BF1F600387C9B /* FilteredMovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 018B57572C2BF1F600387C9B /* FilteredMovieList.swift */; };
 		0190C53C2C28B18A003DF4BA /* FriendsFavoriteMoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190C53B2C28B18A003DF4BA /* FriendsFavoriteMoviesApp.swift */; };
 		0190C53E2C28B18A003DF4BA /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190C53D2C28B18A003DF4BA /* MovieList.swift */; };
 		0190C5402C28B18A003DF4BA /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0190C53F2C28B18A003DF4BA /* Movie.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		018B57552C2B6CD200387C9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		018B57572C2BF1F600387C9B /* FilteredMovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredMovieList.swift; sourceTree = "<group>"; };
 		0190C5382C28B18A003DF4BA /* FriendsFavoriteMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendsFavoriteMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0190C53B2C28B18A003DF4BA /* FriendsFavoriteMoviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsFavoriteMoviesApp.swift; sourceTree = "<group>"; };
 		0190C53D2C28B18A003DF4BA /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				01D8FF442C2AB22D00638DC6 /* FriendList.swift */,
 				01D8FF482C2B54DF00638DC6 /* FriendDetail.swift */,
 				0190C53D2C28B18A003DF4BA /* MovieList.swift */,
+				018B57572C2BF1F600387C9B /* FilteredMovieList.swift */,
 				01B95FE02C29197D00CD2D1D /* MovieDetail.swift */,
 			);
 			path = Views;
@@ -181,6 +184,7 @@
 				01D8FF452C2AB22D00638DC6 /* FriendList.swift in Sources */,
 				018B57562C2B6CD200387C9B /* ContentView.swift in Sources */,
 				01D8FF432C2A276B00638DC6 /* Friend.swift in Sources */,
+				018B57582C2BF1F600387C9B /* FilteredMovieList.swift in Sources */,
 				0190C53C2C28B18A003DF4BA /* FriendsFavoriteMoviesApp.swift in Sources */,
 				01B95FDF2C29123B00CD2D1D /* SampleData.swift in Sources */,
 			);

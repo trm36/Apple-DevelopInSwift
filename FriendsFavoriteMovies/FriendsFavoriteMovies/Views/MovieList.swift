@@ -27,51 +27,46 @@ struct MovieList: View {
         
         _movies = Query(filter: predicate, sort: \Movie.title)
     }
-
+    
     // MARK: - BODY
     var body: some View {
-        NavigationSplitView {
-            Group {
-                if movies.isEmpty {
-                    ContentUnavailableView {
-                        Label("No Movies", systemImage: "film.stack")
-                    }
-                } else {
-                    List {
-                        ForEach(movies) { movie in
-                            NavigationLink {
-                                MovieDetail(movie: movie)
-                            } label: {
-                                Text(movie.title)
-                            }
+        Group {
+            if movies.isEmpty {
+                ContentUnavailableView {
+                    Label("No Movies", systemImage: "film.stack")
+                }
+            } else {
+                List {
+                    ForEach(movies) { movie in
+                        NavigationLink {
+                            MovieDetail(movie: movie)
+                        } label: {
+                            Text(movie.title)
                         }
-                        .onDelete(perform: deleteMovies)
                     }
+                    .onDelete(perform: deleteMovies)
                 }
             }
-            .navigationTitle("Movies")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addMovie) {
-                        Label("Add Movie", systemImage: "plus")
-                    }
+        }
+        .navigationTitle("Movies")
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                EditButton()
+            }
+            ToolbarItem {
+                Button(action: addMovie) {
+                    Label("Add Movie", systemImage: "plus")
                 }
             }
-            .sheet(item: $newMovie) { movie in
-                NavigationStack {
-                    MovieDetail(movie: movie, isNew: true)
-                }
-                .interactiveDismissDisabled()
+        }
+        .sheet(item: $newMovie) { movie in
+            NavigationStack {
+                MovieDetail(movie: movie, isNew: true)
             }
-        } detail: {
-            Text("Select a movie")
-                .navigationTitle("Movie")
+            .interactiveDismissDisabled()
         }
     }
-
+    
     // MARK: - MODEL CONTROLLER FUNCTIONS
     private func addMovie() {
         withAnimation {
@@ -80,7 +75,7 @@ struct MovieList: View {
             newMovie = movie
         }
     }
-
+    
     private func deleteMovies(offsets: IndexSet) {
         withAnimation {
             for index in offsets {
@@ -92,16 +87,22 @@ struct MovieList: View {
 
 // MARK: - PREVIEWS
 #Preview {
-    MovieList()
-        .modelContainer(SampleData.shared.modelContainer)
+    NavigationStack {
+        MovieList()
+            .modelContainer(SampleData.shared.modelContainer)
+    }
 }
 
 #Preview("Empty List") {
-    MovieList()
-        .modelContainer(for: Movie.self, inMemory: true)
+    NavigationStack {
+        MovieList()
+            .modelContainer(for: Movie.self, inMemory: true)
+    }
 }
 
 #Preview("Filtered") {
-    MovieList(titleFilter: "the")
-        .modelContainer(SampleData.shared.modelContainer)
+    NavigationStack {
+        MovieList(titleFilter: "the")
+            .modelContainer(SampleData.shared.modelContainer)
+    }
 }

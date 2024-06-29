@@ -1,0 +1,23 @@
+#usda 1.0
+(
+    customLayerData = {
+        string creator = "Reality Composer Pro Version 1.0 (409.100.15)"
+    }
+    defaultPrim = "Root"
+    metersPerUnit = 1
+    upAxis = "Y"
+)
+
+def Xform "Root"
+{
+    def "clam" (
+        active = true
+        prepend references = @clam.usdz@
+    )
+    {
+        float3 xformOp:scale = (0.1, 0.1, 0.1)
+        float3 xformOp:translate = (-0.0009783481, 0, 0.033598304)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+}
+

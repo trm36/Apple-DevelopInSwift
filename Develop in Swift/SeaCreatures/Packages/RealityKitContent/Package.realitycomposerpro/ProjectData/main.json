@@ -1,0 +1,27 @@
+{
+  "pathsToIds" : {
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/GridMaterial.usda" : "440DE5B4-E4E4-459B-AABF-9ACE96319272",
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/procedural_sphere_grid.usda" : "34C460AE-CA1B-4348-BD05-621ACBDFFE97",
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Scene.usda" : "0A9B4653-B11E-4D6A-850E-C6FCB621626C",
+    "\/RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Untitled Scene.usda" : "03E02005-EFA6-48D6-8A76-05B2822A74E9",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/ClamScene.usda" : "90398CEB-7756-457F-B918-25B75D4DE364",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/FishScene.usda" : "4FCA7C96-B191-48ED-901E-808CA9F0671F",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/GridMaterial.usda" : "FBD8436F-6B8B-4B82-99B5-995D538B4704",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/procedural_sphere_grid.usda" : "1CBF3893-ABFD-408C-8B91-045BFD257808",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/Scene.usda" : "26DBAE76-5DD8-47B6-A085-1B4ADA111097",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/SeaCreatureModels\/clam.usdz" : "88836B47-7227-43C2-9701-FF20AF9B0F45",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/SeaCreatureModels\/ClamScene.usda" : "D8E89876-F4EC-4BE1-B3AA-BDB4F331E1E3",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/SeaCreatureModels\/FishScene.usda" : "5FC5431D-F0B1-4E7A-B7E2-66D94D3B669F",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/SeaCreatureModels\/slug.usdz" : "FB84575D-325D-413D-B720-8AF6064A2229",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/SeaCreatureModels\/SlugScene.usda" : "2DC4080B-F1BE-4D6D-B595-65C6410D0C57",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/SeaCreatureModels\/starfish.usdz" : "0F445B8D-E2ED-409C-9D95-9BD074BDF41A",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/SeaCreatureModels\/StarfishScene.usda" : "54E27DAF-055F-4787-9FAA-DE5B2B934F26",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/SeaCreatureModels\/Untitled%20Scene.usda" : "699C7BAD-B6F7-4F85-A43D-99AAC161512A",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/SeaCreatureModels\/Untitled%20Scene%201.usda" : "037A98D1-E971-4DB9-8EC6-0ECBE35EA03B",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/SeaCreatureModels\/Untitled%20Scene%202.usda" : "493F2337-B5EA-46FD-B969-721A1ED9AAA2",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/SeaCreatureModels\/Untitled%20Scene%203.usda" : "F8C842F2-CA74-47CB-8571-923CC258268E",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/SlugScene.usda" : "479FCBF7-4CFB-4647-9800-93EE64623CC5",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/StarfishScene.usda" : "B453C4D7-D5DF-48DD-A153-345B573AC4CF",
+    "RealityKitContent\/Sources\/RealityKitContent\/RealityKitContent.rkassets\/ToyBiplane.usdz" : "5C9189A4-4B59-4EB8-8216-33A33608BA12"
+  }
+}

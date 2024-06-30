@@ -20,6 +20,7 @@
 		01BE357D2C3112AE00EF5933 /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE357C2C3112AE00EF5933 /* LandmarkRow.swift */; };
 		01BE357F2C31144300EF5933 /* LandmarkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE357E2C31144300EF5933 /* LandmarkList.swift */; };
 		01BE35812C3115FF00EF5933 /* LandmarkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE35802C3115FF00EF5933 /* LandmarkDetail.swift */; };
+		01BE35842C31592300EF5933 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE35832C31592300EF5933 /* FavoriteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		01BE357C2C3112AE00EF5933 /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
 		01BE357E2C31144300EF5933 /* LandmarkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkList.swift; sourceTree = "<group>"; };
 		01BE35802C3115FF00EF5933 /* LandmarkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkDetail.swift; sourceTree = "<group>"; };
+		01BE35832C31592300EF5933 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +91,8 @@
 		01BE35762C310DDD00EF5933 /* MODEL */ = {
 			isa = PBXGroup;
 			children = (
-				01BE35742C310DC600EF5933 /* Landmark.swift */,
 				01BE35792C31114100EF5933 /* ModelData.swift */,
+				01BE35742C310DC600EF5933 /* Landmark.swift */,
 				01BE35772C3110C900EF5933 /* Coordinates.swift */,
 				01BE35722C310D9600EF5933 /* landmarkData.json */,
 			);
@@ -114,6 +116,7 @@
 				01BE356E2C30A7C700EF5933 /* CircleImage.swift */,
 				01BE35702C30A90700EF5933 /* MapView.swift */,
 				01BE357C2C3112AE00EF5933 /* LandmarkRow.swift */,
+				01BE35832C31592300EF5933 /* FavoriteButton.swift */,
 			);
 			path = "HELPER VIEWS";
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				01BE35752C310DC600EF5933 /* Landmark.swift in Sources */,
 				01BE357D2C3112AE00EF5933 /* LandmarkRow.swift in Sources */,
 				01BE35812C3115FF00EF5933 /* LandmarkDetail.swift in Sources */,
+				01BE35842C31592300EF5933 /* FavoriteButton.swift in Sources */,
 				01BE357A2C31114100EF5933 /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

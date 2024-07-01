@@ -11,6 +11,9 @@ import Foundation
 class ModelData {
     /// The landmarks loaded from the included JSON data file.
     var landmarks: [Landmark] = load("landmarkData.json")
+    
+    /// The hikes loaded from the included JSON data file.
+    var hikes: [Hike] = load("hikeData.json")
 }
 
 

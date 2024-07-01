@@ -21,7 +21,13 @@ struct Landmark: Hashable, Codable, Identifiable {
     var description: String
     
     /// The type of landmark.
-    var category: String
+    var category: Category
+    /// An enumeration of the categories that describe a `Landmark`.
+    enum Category: String, CaseIterable, Codable {
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
+    }
     
     /// The park where the landmark is located.
     var park: String

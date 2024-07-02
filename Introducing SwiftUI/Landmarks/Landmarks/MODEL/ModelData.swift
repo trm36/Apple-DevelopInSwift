@@ -26,6 +26,9 @@ class ModelData {
     // MARK: - HIKE MODEL DATA
     /// The hikes loaded from the included JSON data file.
     var hikes: [Hike] = load("hikeData.json")
+    
+    // MARK: - PROFILE MODEL DATA
+    var profile = Profile.default
 }
 
 

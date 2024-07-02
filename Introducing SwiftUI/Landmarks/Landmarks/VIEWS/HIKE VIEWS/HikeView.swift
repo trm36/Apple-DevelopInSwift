@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HikeView: View {
     var hike: Hike
-    @State private var showDetail = true
+    @State private var showDetail = false
 
     var body: some View {
         let mf = MeasurementFormatter()
@@ -38,7 +38,7 @@ struct HikeView: View {
                         .labelStyle(.iconOnly)
                         .imageScale(.large)
                         .rotationEffect(.degrees(showDetail ? 90 : 0))
-                        .scaleEffect(showDetail ? 1.5 : 1)
+//                        .scaleEffect(showDetail ? 1.5 : 1)
                         .padding()
                 }
             }

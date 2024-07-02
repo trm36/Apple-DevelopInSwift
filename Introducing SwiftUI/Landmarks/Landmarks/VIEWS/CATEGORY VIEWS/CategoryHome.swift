@@ -11,6 +11,10 @@ struct CategoryHome: View {
     // MARK: - ENVIRONMENT VARIABLES
     @Environment(ModelData.self) var modelData
     
+    // MARK: - STATE VARIABLES
+    /// Indicates whether the profile is currently showing or not.
+    @State private var showingProfile = false
+    
     var body: some View {
         NavigationSplitView {
             List {
@@ -34,6 +38,17 @@ struct CategoryHome: View {
             }
             .listStyle(.grouped)
             .navigationTitle("Featured")
+            .toolbar {
+                Button {
+                    showingProfile.toggle()
+                } label: {
+                    Label("User Profile", systemImage: "person.crop.circle")
+                }
+                .sheet(isPresented: $showingProfile) {
+                    ProfileHost()
+                        .environment(modelData)
+                }
+            }
         } detail: {
             Text("Select a landmark.")
         }

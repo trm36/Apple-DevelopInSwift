@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		015639372C3D115500A9B0CD /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015639362C3D115500A9B0CD /* ProfileEditor.swift */; };
 		01BE35612C30A34700EF5933 /* LandmarksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE35602C30A34700EF5933 /* LandmarksApp.swift */; };
 		01BE35632C30A34700EF5933 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE35622C30A34700EF5933 /* ContentView.swift */; };
 		01BE35652C30A34800EF5933 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BE35642C30A34800EF5933 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		015639362C3D115500A9B0CD /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
 		01BE355D2C30A34700EF5933 /* Landmarks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Landmarks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BE35602C30A34700EF5933 /* LandmarksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarksApp.swift; sourceTree = "<group>"; };
 		01BE35622C30A34700EF5933 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				01BE35AE2C33B60700EF5933 /* ProfileHost.swift */,
+				015639362C3D115500A9B0CD /* ProfileEditor.swift */,
 				01BE35B02C33B6B600EF5933 /* ProfileSummary.swift */,
 			);
 			path = "PROFILE VIEWS";
@@ -296,6 +299,7 @@
 			files = (
 				01BE35932C32868600EF5933 /* Hike.swift in Sources */,
 				01BE35862C31FBD400EF5933 /* HexagonParameters.swift in Sources */,
+				015639372C3D115500A9B0CD /* ProfileEditor.swift in Sources */,
 				01BE35B12C33B6B600EF5933 /* ProfileSummary.swift in Sources */,
 				01BE35632C30A34700EF5933 /* ContentView.swift in Sources */,
 				01BE35AC2C33B4A700EF5933 /* Profile.swift in Sources */,

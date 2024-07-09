@@ -18,11 +18,7 @@ struct CategoryHome: View {
     var body: some View {
         NavigationSplitView {
             List {
-                modelData.featuredLandmarks[0].image
-                    .resizable()
-                    .scaledToFill()
-                    .frame(height: 200.0)
-                    .clipped()
+                PageView(pages: modelData.featuredLandmarks.map { FeatureCard(landmark: $0) })
                     .listRowInsets(EdgeInsets())
                 
                 let categories = modelData.categoryGroupedLandmarks.keys

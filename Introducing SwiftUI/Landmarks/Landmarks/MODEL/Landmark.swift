@@ -41,6 +41,13 @@ struct Landmark: Hashable, Codable, Identifiable {
         return Image(imageName)
     }
     
+    
+    var featureImage: Image? {
+        let featureImageName = imageName + "_feature"
+        guard let _ = UIImage(named: featureImageName) else { return nil }
+        return Image(featureImageName)
+    }
+    
     // MARK: - LOCATION PROPERTIES
     /// The city where the landmark is located.
     var city: String

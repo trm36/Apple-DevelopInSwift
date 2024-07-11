@@ -14,19 +14,37 @@ struct LandmarkList: View {
     // MARK: - STATE VARIABLES
     /// Indicates whether the view should show only the favorite landmarks or all landmarks.
     @State private var showFavoritesOnly = false
-    
-    var filteredLandmarks: [Landmark] {
-        // Shows all when showFavoritesOnly is false, or shows favorite landmarks when showFavoritesOnly is true.
-        return modelData.landmarks.filter { !showFavoritesOnly || $0.isFavorite }
+
+    /// Indicates the currently selected filter.
+    @State private var filter = FilterCategory.all
+
+    // MARK: - FILTER LANDMARKS
+    enum FilterCategory: String, CaseIterable, Identifiable {
+        case all = "All"
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
+
+        var id: FilterCategory { self }
     }
-    
+
+    // An array of Landmark that match the filter settings.
+    var filteredLandmarks: [Landmark] {
+        return modelData.landmarks.filter { landmark in
+            (!showFavoritesOnly || landmark.isFavorite)
+            && (filter == .all || filter.rawValue == landmark.category.rawValue)
+        }
+    }
+
+    // A title for the navigation bar that matches the filter settings.
+    var title: String {
+        let title = filter == .all ? "Landmarks" : filter.rawValue
+        return showFavoritesOnly ? "Favorite \(title)" : title
+    }
+
     var body: some View {
         NavigationSplitView {
             List {
-                Toggle(isOn: $showFavoritesOnly) {
-                    Text("Favorites Only")
-                }
-                
                 ForEach(filteredLandmarks) { landmark in
                     NavigationLink {
                         LandmarkDetail(landmark: landmark)
@@ -36,7 +54,24 @@ struct LandmarkList: View {
                 }
             }
             .animation(.default, value: filteredLandmarks)
-            .navigationTitle("Landmarks")
+            .navigationTitle(title)
+            .frame(minWidth: 300.0)
+            .toolbar {
+                ToolbarItem {
+                    Menu {
+                        Picker("Category", selection: $filter) {
+                            ForEach(FilterCategory.allCases) { category in
+                                Text(category.rawValue).tag(category)
+                            }
+                        }
+                        Toggle(isOn: $showFavoritesOnly) {
+                            Label("Favorites only", systemImage: "star.fill")
+                        }
+                    } label: {
+                        Label("Filter", systemImage: "slider.horizontal.3")
+                    }
+                }
+            }
         } detail: {
             Text("Select a Landmark")
         }

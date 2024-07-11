@@ -44,8 +44,7 @@ struct Landmark: Hashable, Codable, Identifiable {
     
     var featureImage: Image? {
         let featureImageName = imageName + "_feature"
-        guard let _ = UIImage(named: featureImageName) else { return nil }
-        return Image(featureImageName)
+        return isFeatured ? Image(featureImageName) : nil
     }
     
     // MARK: - LOCATION PROPERTIES

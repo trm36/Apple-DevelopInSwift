@@ -83,6 +83,9 @@
 		01BE35AF2C33B60700EF5933 /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE35AE2C33B60700EF5933 /* ProfileHost.swift */; };
 		01BE35B12C33B6B600EF5933 /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE35B02C33B6B600EF5933 /* ProfileSummary.swift */; };
 		01BE35B32C33B80D00EF5933 /* HikeBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE35B22C33B80D00EF5933 /* HikeBadge.swift */; };
+		01BEE5392C40A8B700C9C0D4 /* LandmarkCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEE5382C40A8B700C9C0D4 /* LandmarkCommands.swift */; };
+		01BEE53A2C40A8B700C9C0D4 /* LandmarkCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEE5382C40A8B700C9C0D4 /* LandmarkCommands.swift */; };
+		01BEE53C2C40B04000C9C0D4 /* LandmarkSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BEE53B2C40B04000C9C0D4 /* LandmarkSettings.swift */; };
 		01CEC01E2C3E64E4005C59E4 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEC01D2C3E64E4005C59E4 /* NotificationView.swift */; };
 		01CEC0202C3E670F005C59E4 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CEC01F2C3E670F005C59E4 /* NotificationController.swift */; };
 /* End PBXBuildFile section */
@@ -165,6 +168,8 @@
 		01BE35AE2C33B60700EF5933 /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
 		01BE35B02C33B6B600EF5933 /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
 		01BE35B22C33B80D00EF5933 /* HikeBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HikeBadge.swift; sourceTree = "<group>"; };
+		01BEE5382C40A8B700C9C0D4 /* LandmarkCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkCommands.swift; sourceTree = "<group>"; };
+		01BEE53B2C40B04000C9C0D4 /* LandmarkSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkSettings.swift; sourceTree = "<group>"; };
 		01CEC01D2C3E64E4005C59E4 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		01CEC01F2C3E670F005C59E4 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		01CEC0222C3E70A6005C59E4 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -240,6 +245,8 @@
 			isa = PBXGroup;
 			children = (
 				01AAA6742C3FA31300FC247E /* ContentView.swift */,
+				01BEE5382C40A8B700C9C0D4 /* LandmarkCommands.swift */,
+				01BEE53B2C40B04000C9C0D4 /* LandmarkSettings.swift */,
 				01AAA68D2C3FA66900FC247E /* VIEWS */,
 				01AAA6762C3FA31400FC247E /* Assets.xcassets */,
 				01AAA67B2C3FA31400FC247E /* MacLandmarks.entitlements */,
@@ -564,9 +571,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				01AAA6752C3FA31300FC247E /* ContentView.swift in Sources */,
+				01BEE53A2C40A8B700C9C0D4 /* LandmarkCommands.swift in Sources */,
 				01AAA67F2C3FA3BE00FC247E /* Landmark.swift in Sources */,
 				01AAA6802C3FA3BE00FC247E /* Coordinates.swift in Sources */,
 				01AAA6812C3FA3BE00FC247E /* FavoriteButton.swift in Sources */,
+				01BEE53C2C40B04000C9C0D4 /* LandmarkSettings.swift in Sources */,
 				01AAA6822C3FA3BE00FC247E /* MapView.swift in Sources */,
 				01AAA6832C3FA3BE00FC247E /* Hike.swift in Sources */,
 				01AAA6842C3FA3BE00FC247E /* Profile.swift in Sources */,
@@ -588,6 +597,7 @@
 				015639372C3D115500A9B0CD /* ProfileEditor.swift in Sources */,
 				01BE35B12C33B6B600EF5933 /* ProfileSummary.swift in Sources */,
 				01BE35632C30A34700EF5933 /* ContentView.swift in Sources */,
+				01BEE5392C40A8B700C9C0D4 /* LandmarkCommands.swift in Sources */,
 				01BE35AC2C33B4A700EF5933 /* Profile.swift in Sources */,
 				01BE35712C30A90700EF5933 /* MapView.swift in Sources */,
 				01BE359D2C328BCD00EF5933 /* HikeGraph.swift in Sources */,

@@ -20,6 +20,12 @@ struct DailyScrum: Identifiable {
     /// The length of the scrum, in minutes.
     var lengthInMinutes: Int
 
+    /// The length of the scrum, in minutes represented as a `Double`.
+    var lengthInMintuesDouble: Double {
+        get { Double(lengthInMinutes) }
+        set { lengthInMinutes = Int(newValue) }
+    }
+
     /// The `Theme` of the scrum.
     var theme: Theme
 
@@ -49,4 +55,9 @@ extension DailyScrum {
                    lengthInMinutes: 5,
                    theme: .poppy),
     ]
+
+    /// Creates a new empty/default scrum.
+    static var emptyScrum: DailyScrum {
+        return DailyScrum(title: "", attendees: [], lengthInMinutes: 5, theme: .sky)
+    }
 }

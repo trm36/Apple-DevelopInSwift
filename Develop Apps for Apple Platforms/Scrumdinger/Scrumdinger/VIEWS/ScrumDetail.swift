@@ -10,7 +10,11 @@ import SwiftUI
 struct ScrumDetail: View {
     /// The scrum to display the details of.
     let scrum: DailyScrum
-    
+
+    // MARK: - STATE VARIABLES
+    /// Indicates if this view is presenting the edit view.
+    @State private var isPresentingEditView: Bool = false
+
     var body: some View {
         List {
             Section(header: Text("Meeting Info")) {
@@ -47,6 +51,30 @@ struct ScrumDetail: View {
             }
         }
         .navigationTitle(scrum.title)
+        .toolbar {
+            Button("Edit") {
+                isPresentingEditView = true
+            }
+        }
+        .sheet(isPresented: $isPresentingEditView) {
+            NavigationStack {
+                ScrumEditView()
+                    .navigationTitle(scrum.title)
+                    .toolbar {
+                        ToolbarItem(placement: .cancellationAction) {
+                            Button("Cancel") {
+                                isPresentingEditView = false
+                            }
+                        }
+                        ToolbarItem(placement: .confirmationAction) {
+                            Button("Save") {
+                                // TODO: - ADD BUTTON ACTION - Save edited scrum data
+                                isPresentingEditView = false
+                            }
+                        }
+                    }
+            }
+        }
     }
 }
 

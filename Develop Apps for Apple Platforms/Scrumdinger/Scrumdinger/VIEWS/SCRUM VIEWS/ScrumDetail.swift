@@ -9,11 +9,20 @@ import SwiftUI
 
 struct ScrumDetail: View {
     /// The scrum to display the details of.
-    let scrum: DailyScrum
+    @Binding var scrum: DailyScrum
 
     // MARK: - STATE VARIABLES
     /// Indicates if this view is presenting the edit view.
     @State private var isPresentingEditView: Bool = false
+
+    /// A copy of the scrum to be used for editing.
+    ///
+    /// This empty scrum is updated to match the selected scrum
+    /// when the user taps the Edit button. If the user, cancels
+    /// this data will be discarded. If the user saves the changes,
+    /// we'll use the changed data in this scrum to update the source
+    /// of truth.
+    @State private var editingScrum = DailyScrum.emptyScrum
 
     var body: some View {
         List {
@@ -54,22 +63,25 @@ struct ScrumDetail: View {
         .toolbar {
             Button("Edit") {
                 isPresentingEditView = true
+                editingScrum = scrum
             }
         }
         .sheet(isPresented: $isPresentingEditView) {
             NavigationStack {
-                ScrumEditView()
+                ScrumEditView(scrum: $editingScrum)
                     .navigationTitle(scrum.title)
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
                             Button("Cancel") {
                                 isPresentingEditView = false
+                                editingScrum = .emptyScrum
                             }
                         }
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Save") {
                                 // TODO: - ADD BUTTON ACTION - Save edited scrum data
                                 isPresentingEditView = false
+                                scrum = editingScrum
                             }
                         }
                     }
@@ -81,7 +93,7 @@ struct ScrumDetail: View {
 #Preview {
     let scrum = DailyScrum.sampleData[0]
     return NavigationStack {
-        ScrumDetail(scrum: scrum)
+        ScrumDetail(scrum: .constant(scrum))
             .navigationTitle(scrum.title)
     }
 }

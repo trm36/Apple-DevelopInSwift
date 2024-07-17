@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum Theme: String {
+enum Theme: String, CaseIterable, Identifiable {
     case bubblegum
     case buttercup
     case indigo
@@ -45,5 +45,10 @@ enum Theme: String {
     /// The display name of the Theme.
     var name: String {
         return rawValue.capitalized
+    }
+
+    /// The `Theme`'s raw value, An id property to conform to Identifiable.
+    var id: String {
+        return self.rawValue
     }
 }

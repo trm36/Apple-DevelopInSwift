@@ -26,6 +26,8 @@ enum Theme: String {
     case teal
     case yellow
 
+    /// The theme's accent color which provides a high-contrast complement
+    /// to the theme’s main color, `mainColor`, ensuring your views remain accessible.
     var accentColor: Color {
         switch self {
         case .bubblegum, .buttercup, .lavender, .orange, .periwinkle, .poppy, .seafoam, .sky, .tan, .teal, .yellow:
@@ -35,6 +37,7 @@ enum Theme: String {
         }
     }
 
+    /// The theme's main color.
     var mainColor: Color {
         Color(rawValue)
     }

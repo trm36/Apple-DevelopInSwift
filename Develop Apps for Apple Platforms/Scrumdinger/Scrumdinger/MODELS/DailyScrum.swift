@@ -14,8 +14,8 @@ struct DailyScrum: Identifiable {
     /// The title of the daily scrum.
     var title: String
 
-    /// The names of the attendees of the scrum.
-    var attendees: [String]
+    /// The attendees of the scrum.
+    var attendees: [Attendee]
 
     /// The length of the scrum, in minutes.
     var lengthInMinutes: Int
@@ -25,12 +25,12 @@ struct DailyScrum: Identifiable {
 
     /// Initializes a new Daily Scrum with a new unique ID.
     init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, theme: Theme) {
-            self.id = id
-            self.title = title
-            self.attendees = attendees
-            self.lengthInMinutes = lengthInMinutes
-            self.theme = theme
-        }
+        self.id = id
+        self.title = title
+        self.attendees = attendees.compactMap { Attendee(name: $0) }
+        self.lengthInMinutes = lengthInMinutes
+        self.theme = theme
+    }
 }
 
 extension DailyScrum {

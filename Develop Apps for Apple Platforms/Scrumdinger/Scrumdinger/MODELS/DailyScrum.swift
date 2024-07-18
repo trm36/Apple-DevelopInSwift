@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DailyScrum: Identifiable {
+struct DailyScrum: Identifiable, Codable {
     /// A UUID that uniquely identifies the scrum.
     var id: UUID
 

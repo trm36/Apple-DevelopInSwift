@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Attendee: Identifiable {
+struct Attendee: Identifiable, Codable {
     /// A UUID that uniquely identifies the attendee.
     let id: UUID
 

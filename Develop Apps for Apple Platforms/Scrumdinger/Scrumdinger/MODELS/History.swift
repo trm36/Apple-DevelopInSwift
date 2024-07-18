@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct History: Identifiable {
+struct History: Identifiable, Codable {
     /// A unique string that identifies the `History` instance.
     let id: UUID
 

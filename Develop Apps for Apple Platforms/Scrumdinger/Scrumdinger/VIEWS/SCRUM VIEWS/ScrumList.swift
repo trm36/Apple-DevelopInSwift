@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ScrumList: View {
+
+    /// Used to view the operational state of the App's scene.
+    @Environment(\.scenePhase) private var scenePhase
+
     /// The scrums to display on the Scrum List.
     @Binding var scrums: [DailyScrum]
 
@@ -15,6 +19,9 @@ struct ScrumList: View {
     ///
     /// Controls the presentation of the edit view to create a new scrum.
     @State private var isPresentingNewScrumView = false
+
+    ///
+    let saveAction: () -> Void
 
     var body: some View {
         NavigationStack {
@@ -37,6 +44,9 @@ struct ScrumList: View {
         .sheet(isPresented: $isPresentingNewScrumView) {
             NewScrumSheet(scrums: $scrums, isPresentingNewScrumView: $isPresentingNewScrumView)
         }
+        .onChange(of: scenePhase) { phase in
+            if phase == .inactive { saveAction() }
+        }
     }
 }
 
@@ -45,6 +55,6 @@ struct ScrumsList_Previews: PreviewProvider {
     static var scrums: [DailyScrum] = DailyScrum.sampleData
 
     static var previews: some View {
-        ScrumList(scrums: .constant(scrums))
+        ScrumList(scrums: .constant(scrums), saveAction: {})
     }
 }

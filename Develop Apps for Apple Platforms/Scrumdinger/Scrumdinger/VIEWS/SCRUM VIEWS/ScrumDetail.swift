@@ -51,13 +51,27 @@ struct ScrumDetail: View {
 
                 }
                 .accessibilityElement(children: .combine)
-            }
+            } // END MEETING INFO SECTION
 
             Section(header: Text("Attendees")) {
                 ForEach(scrum.attendees) { attendee in
                     Label(attendee.name, systemImage: "person")
                 }
-            }
+            } // END ATTENDEES SECTION
+
+            Section(header: Text("History")) {
+                if scrum.histories.isEmpty {
+                    Label("No meetings", systemImage: "calendar.badge.exclamationmark")
+                        .foregroundStyle(.secondary)
+                } else {
+                    ForEach(scrum.histories) { history in
+                        HStack {
+                            Image(systemName: "calendar")
+                            Text(history.date, style: .date)
+                        }
+                    }
+                }
+            } // END HISTORY SECTION
         }
         .navigationTitle(scrum.title)
         .toolbar {

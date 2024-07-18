@@ -29,6 +29,9 @@ struct DailyScrum: Identifiable {
     /// The `Theme` of the scrum.
     var theme: Theme
 
+    /// An array of History objects that records each meeting associated with this scrum.
+    var histories: [History] = []
+
     /// Initializes a new Daily Scrum with a new unique ID.
     init(id: UUID = UUID(), title: String, attendees: [String], lengthInMinutes: Int, theme: Theme) {
         self.id = id

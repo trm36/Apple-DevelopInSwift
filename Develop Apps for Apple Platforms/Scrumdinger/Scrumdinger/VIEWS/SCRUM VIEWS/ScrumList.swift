@@ -11,6 +11,11 @@ struct ScrumList: View {
     /// The scrums to display on the Scrum List.
     @Binding var scrums: [DailyScrum]
 
+    /// Indicates if the view is presenting a View to create a new scrum.
+    ///
+    /// Controls the presentation of the edit view to create a new scrum.
+    @State private var isPresentingNewScrumView = false
+
     var body: some View {
         NavigationStack {
             List($scrums) { $scrum in
@@ -22,12 +27,15 @@ struct ScrumList: View {
             .navigationTitle("Scrums")
             .toolbar {
                 Button {
-                    // TODO: ADD BUTTON ACTION - create a new scrum
+                    isPresentingNewScrumView = true
                 } label: {
                     Image(systemName: "plus")
                 }
                 .accessibilityLabel("New Scrum")
             }
+        }
+        .sheet(isPresented: $isPresentingNewScrumView) {
+            NewScrumSheet(scrums: $scrums, isPresentingNewScrumView: $isPresentingNewScrumView)
         }
     }
 }

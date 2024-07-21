@@ -141,6 +141,16 @@ final class ScrumTimer: ObservableObject {
 }
 
 
+// MARK: - ScrumTimer.Speaker Sample Data
+extension ScrumTimer.Speaker {
+    /// Sample speakers used for testing.
+    static var sampleSpeakers: [ScrumTimer.Speaker] {
+            return [ScrumTimer.Speaker(name: "Bill", isCompleted: true),
+                    ScrumTimer.Speaker(name: "Cathy", isCompleted: false)]
+        }
+}
+
+
 extension Array<Attendee> {
     var speakers: [ScrumTimer.Speaker] {
         if isEmpty {

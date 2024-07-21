@@ -12,6 +12,9 @@ struct ScrumdingerApp: App {
     /// Initializes the shared scrum controller.
     @StateObject private var scrumController = ScrumController()
 
+    /// asdf
+    @State private var errorWrapper: ErrorWrapper?
+
     var body: some Scene {
         WindowGroup {
             ScrumList(scrums: $scrumController.scrums, saveAction: {
@@ -19,17 +22,22 @@ struct ScrumdingerApp: App {
                     do {
                         try await scrumController.save(scrums: scrumController.scrums)
                     } catch {
-                        fatalError(error.localizedDescription)
+                        errorWrapper = ErrorWrapper(error: error, guidance: "Try again later.")
                     }
                 }
             })
-                .task {
-                    do {
-                        try await scrumController.load()
-                    } catch {
-                        fatalError(error.localizedDescription)
-                    }
+            .task {
+                do {
+                    try await scrumController.load()
+                } catch {
+                    errorWrapper = ErrorWrapper(error: error, guidance: "Scrumdinger will load sample data and continue.")
                 }
+            }
+            .sheet(item: $errorWrapper) {
+                scrumController.scrums = DailyScrum.sampleData
+            } content: { wrapper in
+                ErrorView(errorWrapper: wrapper)
+            }
         }
     }
 }

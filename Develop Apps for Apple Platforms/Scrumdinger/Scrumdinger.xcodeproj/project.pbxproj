@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0131E9B72C4C8BB700D3CE46 /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0131E9B62C4C8BB700D3CE46 /* ErrorWrapper.swift */; };
+		0131E9B92C4C8DED00D3CE46 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0131E9B82C4C8DED00D3CE46 /* ErrorView.swift */; };
 		01B8D4012C470C7A00F5DEE4 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8D4002C470C7A00F5DEE4 /* Theme.swift */; };
 		01B8D4032C470F3E00F5DEE4 /* DailyScrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8D4022C470F3E00F5DEE4 /* DailyScrum.swift */; };
 		01B8D4052C47103B00F5DEE4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B8D4042C47103B00F5DEE4 /* CardView.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0131E9B62C4C8BB700D3CE46 /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
+		0131E9B82C4C8DED00D3CE46 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		01B8D4002C470C7A00F5DEE4 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		01B8D4022C470F3E00F5DEE4 /* DailyScrum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyScrum.swift; sourceTree = "<group>"; };
 		01B8D4042C47103B00F5DEE4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 				01B8D4022C470F3E00F5DEE4 /* DailyScrum.swift */,
 				01B8D40F2C474CDD00F5DEE4 /* Attendee.swift */,
 				01BD8BD52C4900F000495B53 /* ScrumTimer.swift */,
+				0131E9B62C4C8BB700D3CE46 /* ErrorWrapper.swift */,
 				01BD8BE42C49DD6200495B53 /* MODEL CONTROLLERS */,
 			);
 			path = MODELS;
@@ -99,6 +104,7 @@
 			children = (
 				01BD8BD32C48FE5900495B53 /* ScrumProgressViewStyle.swift */,
 				01B8D4092C471D2F00F5DEE4 /* TrailingIconLabelStyle.swift */,
+				0131E9B82C4C8DED00D3CE46 /* ErrorView.swift */,
 			);
 			path = "HELPER VIEWS";
 			sourceTree = "<group>";
@@ -274,11 +280,13 @@
 				01BEE54C2C40F79300C9C0D4 /* MeetingView.swift in Sources */,
 				01BD8BD62C4900F000495B53 /* ScrumTimer.swift in Sources */,
 				01B8D4102C474CDD00F5DEE4 /* Attendee.swift in Sources */,
+				0131E9B72C4C8BB700D3CE46 /* ErrorWrapper.swift in Sources */,
 				01B8D4122C47B79500F5DEE4 /* ScrumEditView.swift in Sources */,
 				01B8D4162C48596800F5DEE4 /* ThemePicker.swift in Sources */,
 				01BD8BDD2C49A17500495B53 /* Extensions.swift in Sources */,
 				01BEE54A2C40F79300C9C0D4 /* ScrumdingerApp.swift in Sources */,
 				01B8D4052C47103B00F5DEE4 /* CardView.swift in Sources */,
+				0131E9B92C4C8DED00D3CE46 /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

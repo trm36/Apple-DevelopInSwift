@@ -19,3 +19,16 @@ struct TrailingIconLabelStyle: LabelStyle {
 extension LabelStyle where Self == TrailingIconLabelStyle {
     static var trailingIcon: Self { Self() }
 }
+
+struct TopIconLabelStyle: LabelStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        VStack(spacing: 6.0) {
+            configuration.icon
+            configuration.title
+        }
+    }
+}
+
+extension LabelStyle where Self == TopIconLabelStyle {
+    static var topIcon: Self { Self() }
+}

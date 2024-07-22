@@ -65,9 +65,11 @@ struct ScrumDetail: View {
                         .foregroundStyle(.secondary)
                 } else {
                     ForEach(scrum.histories) { history in
-                        HStack {
-                            Image(systemName: "calendar")
-                            Text(history.date, style: .date)
+                        NavigationLink(destination: HistoryView(history: history)) {
+                            HStack {
+                                Image(systemName: "calendar")
+                                Text(history.date, style: .date)
+                            }
                         }
                     }
                 }
@@ -93,7 +95,6 @@ struct ScrumDetail: View {
                         }
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Save") {
-                                // TODO: - ADD BUTTON ACTION - Save edited scrum data
                                 isPresentingEditView = false
                                 scrum = editingScrum
                             }

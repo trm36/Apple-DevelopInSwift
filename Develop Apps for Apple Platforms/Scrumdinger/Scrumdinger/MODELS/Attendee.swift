@@ -20,3 +20,14 @@ struct Attendee: Identifiable, Codable {
         self.name = name
     }
 }
+
+extension Attendee {
+    /// Returns an array of three sample `Attendee`s for testing.
+    static var sampleAttendees: [Attendee] {
+        return [
+            Attendee(name: "Richard"),
+            Attendee(name: "Joann"),
+            Attendee(name: "Tina"),
+        ]
+    }
+}

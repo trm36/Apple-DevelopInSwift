@@ -14,6 +14,9 @@ struct MeetingTimerView: View {
     /// The theme associated with the timer.
     let theme: Theme
 
+    /// Indicates if the meeting is currently recording.
+    let isRecording: Bool
+
     /// Calculates the current speaker to display on the timer.
     ///
     /// The current speaker is the first person on the list who hasn’t spoken.
@@ -30,6 +33,16 @@ struct MeetingTimerView: View {
                     Text(currentSpeaker)
                         .font(.title)
                     Text("is speaking")
+                    if isRecording {
+                        Image(systemName: "mic")
+                            .foregroundStyle(.red)
+                            .padding(.top, 1.0)
+                            .accessibilityLabel("with transcription.")
+                    } else {
+                        Image(systemName: "mic.slash")
+                            .padding(.top, 1.0)
+                            .accessibilityLabel("without transcription")
+                    }
                 }
                 .accessibilityElement(children: .combine)
                 .foregroundStyle(theme.accentColor)
@@ -48,5 +61,5 @@ struct MeetingTimerView: View {
 }
 
 #Preview {
-    MeetingTimerView(speakers: ScrumTimer.Speaker.sampleSpeakers, theme: .yellow)
+    MeetingTimerView(speakers: ScrumTimer.Speaker.sampleSpeakers, theme: .yellow, isRecording: false)
 }
